@@ -1,5 +1,7 @@
 # A Distributed Motion-Controlled Lighting System
 
+Read more here:
+
 https://www.shawenyao.com/A-Distributed-Motion-Controlled-Lighting-System/
 
 ## Overview
