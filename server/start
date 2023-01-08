@@ -1,0 +1,2 @@
+nohup python3 -u /home/pi/light/server/light_server.py > /home/pi/light/light_server.log &
+nohup python3 -u /home/pi/light/server/light_trigger.py > /home/pi/light/light_trigger.log &
