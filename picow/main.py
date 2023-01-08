@@ -35,12 +35,22 @@ def get_pir():
 
 
 # ===== main =====
+# flash led to indicate power on
+led.on()
+sleep(0.1)
+led.off()
+sleep(1)
+
 # connect to wifi
 connect_wifi()
 
-# initialize led
+# flash led twice to indicate wifi is connected
 led.on()
-sleep(0.5)
+sleep(0.1)
+led.off()
+sleep(0.1)
+led.on()
+sleep(0.1)
 led.off()
 
 led_status = False
