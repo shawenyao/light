@@ -1,6 +1,6 @@
 # A Distributed Motion-Controlled Lighting System
 
-Read more here:
+Read the story:
 
 https://www.shawenyao.com/A-Distributed-Motion-Controlled-Lighting-System/
 
