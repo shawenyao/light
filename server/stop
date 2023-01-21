@@ -1,2 +1,2 @@
-pkill -f light_server.py
-pkill -f light_trigger.py
+pkill -x light_server.py
+pkill -x light_trigger.py
