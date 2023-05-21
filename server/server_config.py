@@ -7,7 +7,7 @@ api = f"http://{server_host}:{server_port}/light/control"
 kasa_host = "xxx.xxx.x.xxx"
 
 # duration of lighting (in seconds)
-duration = 120
+duration = 60
 
 # interval between trigger
 trigger_interval = 0.1
