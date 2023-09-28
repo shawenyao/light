@@ -23,9 +23,18 @@ def control_light():
     response = {"status": "success"}
     return jsonify(response), 200
 
+# toggle the system status (from on to off and from off to on)
+@app.route("/system/mode", methods=["GET"])
+def system_switch():
+    light.mode = not light.mode
+    response = {"status": light.mode}
+    return jsonify(response), 200
+
 # the Light object to model and control its state
 class Light(object):
     def __init__(self):
+        # system switch
+        mode = True
         # the last time when movement is detected
         self.last_movement_time = 0
         # set initial status of the light
@@ -37,9 +46,13 @@ class Light(object):
         return self.last_movement_time
     
     def control_light(self):
-        if (not self.status) and (time() - self.last_movement_time < duration):
+        if (not self.status) and (time() - self.last_movement_time < duration) and self.mode:
+            # 1) light is off and 2) last movement is not too long ago and 3) system is on
+            # then turn on the light
             self.kasa_api(status=True)
         elif (self.status) and (time() - self.last_movement_time >= duration):
+            # 1) light is on and 2) last movement is too long ago
+            # then turn off the light
             self.kasa_api(status=False)
 
     def kasa_api(self, status):
