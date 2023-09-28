@@ -34,7 +34,7 @@ def system_switch():
 class Light(object):
     def __init__(self):
         # system switch
-        mode = True
+        self.mode = True
         # the last time when movement is detected
         self.last_movement_time = 0
         # set initial status of the light
